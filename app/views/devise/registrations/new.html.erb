@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <h2 class="center">Benvenuto, registrati qui!</h2>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div class="input-field">
+        <%= f.label :Nome_e_Cognome %><br />
+        <%= f.text_field :name, autofocus: false %>
+      </div>
+
+      <div class="input-field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: false %>
+      </div>
+
+      <div class="input-field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+
+      <div class="input-field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
+      <div class="col s12 center">
+        <div class="actions">
+          <%= f.submit "Sign up", class: "waves-effect waves-light btn-large" %>
+        </div>
+      </div>
+
+    <% end %>
+    <div class="col s12 center">
+      <br>
+      <%= render "devise/shared/links" %>
+    </div>
+
+  </div>
+</div>
