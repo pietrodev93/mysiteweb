@@ -88,8 +88,8 @@ Rails.application.configure do
   storage: :s3,
   s3_credentials: {
     bucket: ENV.fetch('pietrogiordano'),
-    access_key_id: ENV.fetch('AKIAI5KOE5XUQYMVTXFQ'),
-    secret_access_key: ENV.fetch('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'),
+    access_key_id: ENV.fetch('AKIAI5UB2Q3T4JC7N3EA'),
+    secret_access_key: ENV.fetch('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'),
     s3_region: ENV.fetch('EU'),
   }
 }
